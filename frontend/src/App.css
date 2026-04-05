@@ -1,0 +1,341 @@
+/* App-specific styles */
+.App {
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    @apply bg-gradient-to-b from-[#1a0a2e] via-[#2d1b4e] to-[#1a0a2e] text-white min-h-screen w-64 fixed left-0 top-0;
+}
+
+.sidebar-link {
+    @apply flex items-center gap-3 px-4 py-3 text-white/70 hover:bg-white/10 hover:text-white transition-colors rounded-xl;
+}
+
+.sidebar-link.active {
+    @apply bg-[#F26522] text-white shadow-lg;
+    box-shadow: 0 4px 15px rgba(242, 101, 34, 0.3);
+}
+
+/* Main content */
+.main-content {
+    @apply ml-64 min-h-screen bg-slate-50;
+}
+
+/* Header (page subheader; sits below global SiteHeader) */
+.header {
+    @apply sticky top-16 z-10 border-b border-slate-200 bg-white px-6 py-4;
+}
+
+/* KPI cards */
+.kpi-card {
+    @apply bg-white border border-slate-200 rounded-xl p-5 hover:shadow-md transition-shadow;
+}
+
+.kpi-value {
+    @apply text-2xl font-bold text-slate-900;
+}
+
+.kpi-label {
+    @apply text-sm text-slate-500 mt-1;
+}
+
+/* Chart containers */
+.chart-container {
+    @apply bg-white border border-slate-200 rounded-xl p-6;
+}
+
+/* Badge styles */
+.badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+/* Trend indicators */
+.trend-up {
+    @apply text-emerald-600;
+}
+
+.trend-down {
+    @apply text-red-600;
+}
+
+.trend-neutral {
+    @apply text-slate-500;
+}
+
+/* Table responsive */
+.table-responsive {
+    @apply overflow-x-auto;
+}
+
+/* Filter pills */
+.filter-pill {
+    @apply px-4 py-2 rounded-full text-sm font-medium cursor-pointer transition-colors;
+}
+
+.filter-pill.active {
+    @apply bg-[#F26522] text-white;
+}
+
+.filter-pill:not(.active) {
+    @apply bg-slate-100 text-slate-600 hover:bg-slate-200;
+}
+
+/* Score circles */
+.score-circle {
+    @apply w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-sm;
+}
+
+/* Alert cards */
+.alert-card {
+    @apply bg-white border border-slate-200 rounded-xl p-4 mb-3;
+}
+
+.alert-card.critical {
+    @apply border-l-4 border-l-red-500;
+}
+
+.alert-card.high {
+    @apply border-l-4 border-l-orange-500;
+}
+
+.alert-card.medium {
+    @apply border-l-4 border-l-amber-500;
+}
+
+.alert-card.low {
+    @apply border-l-4 border-l-blue-500;
+}
+
+/* Role card styles */
+.role-card {
+    @apply bg-white border border-slate-200 rounded-xl p-6 cursor-pointer transition-all duration-200;
+}
+
+.role-card:hover {
+    @apply border-[#F26522] shadow-lg;
+    transform: translateY(-4px);
+}
+
+.role-card.selected {
+    @apply border-[#F26522] border-2 shadow-lg;
+}
+
+/* Pillar cards */
+.pillar-card {
+    @apply bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-all;
+}
+
+.pillar-card:hover {
+    transform: translateY(-2px);
+}
+
+/* Status badges */
+.status-on-track {
+    @apply bg-emerald-100 text-emerald-700 border border-emerald-200;
+}
+
+.status-at-risk {
+    @apply bg-amber-100 text-amber-700 border border-amber-200;
+}
+
+.status-delayed {
+    @apply bg-red-100 text-red-700 border border-red-200;
+}
+
+.status-planned {
+    @apply bg-blue-100 text-blue-700 border border-blue-200;
+}
+
+/* Progress bar custom */
+.progress-saffron {
+    background: linear-gradient(90deg, #F26522 0%, #FF8A50 100%);
+}
+
+.progress-blue {
+    background: linear-gradient(90deg, #1E3A8A 0%, #3B82F6 100%);
+}
+
+/* Data table styling */
+.data-table {
+    @apply w-full text-sm;
+}
+
+.data-table th {
+    @apply bg-slate-50 text-slate-600 font-semibold uppercase tracking-wider text-xs px-4 py-3 text-left border-b border-slate-200;
+}
+
+.data-table td {
+    @apply px-4 py-3 border-b border-slate-100;
+}
+
+.data-table tbody tr:hover {
+    @apply bg-slate-50;
+}
+
+/* Alert severity badges */
+.severity-critical {
+    @apply bg-red-500 text-white;
+}
+
+.severity-high {
+    @apply bg-orange-500 text-white;
+}
+
+.severity-medium {
+    @apply bg-amber-500 text-white;
+}
+
+.severity-low {
+    @apply bg-blue-500 text-white;
+}
+
+/* Glass card effect */
+.glass-card {
+    @apply bg-white/80 backdrop-blur-lg border border-white/20 rounded-xl;
+}
+
+/* Gradient text */
+.gradient-text {
+    background: linear-gradient(135deg, #F26522 0%, #FF8A50 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Leaflet map overrides */
+.district-tooltip {
+    background: white !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+    padding: 8px 12px !important;
+}
+
+.district-tooltip::before {
+    border-top-color: #E2E8F0 !important;
+}
+
+.leaflet-container {
+    font-family: 'Outfit', sans-serif;
+    background: #FFFFFF !important;
+}
+
+.leaflet-control-zoom a {
+    color: #1E3A8A !important;
+    border-color: #E2E8F0 !important;
+}
+
+.leaflet-control-zoom a:hover {
+    background-color: #F8FAFC !important;
+}
+
+/* District label and star marker styling */
+.district-label-icon {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.star-marker {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* ============ DARK MODE ============ */
+.dark .main-content {
+    @apply bg-slate-900;
+}
+
+.dark .header {
+    @apply bg-slate-800 border-slate-700;
+}
+
+.dark .header h1,
+.dark .main-content h1,
+.dark .main-content h2,
+.dark .main-content h3,
+.dark .main-content h4 {
+    @apply text-white;
+}
+
+.dark .header p,
+.dark .kpi-label {
+    @apply text-slate-400;
+}
+
+.dark .kpi-card {
+    @apply bg-slate-800 border-slate-700;
+}
+
+.dark .kpi-value {
+    @apply text-white;
+}
+
+.dark .chart-container {
+    @apply bg-slate-800 border-slate-700;
+}
+
+.dark .data-table th {
+    @apply bg-slate-800 text-slate-300 border-slate-700;
+}
+
+.dark .data-table td {
+    @apply border-slate-700 text-slate-300;
+}
+
+.dark .data-table tbody tr:hover {
+    @apply bg-slate-700/50;
+}
+
+.dark .role-card {
+    @apply bg-slate-800 border-slate-700;
+}
+
+.dark .pillar-card {
+    @apply bg-slate-800 border-slate-700;
+}
+
+.dark .pillar-card p, .dark .pillar-card span {
+    @apply text-slate-300;
+}
+
+.dark .alert-card {
+    @apply bg-slate-800 border-slate-700;
+}
+
+.dark .glass-card {
+    @apply bg-slate-800/80 border-slate-700/50;
+}
+
+.dark .filter-pill:not(.active) {
+    @apply bg-slate-700 text-slate-300 hover:bg-slate-600;
+}
+
+/* Dark text overrides for main content area */
+.dark .main-content [class*="text-slate-900"] { color: #F8FAFC; }
+.dark .main-content [class*="text-slate-800"] { color: #F1F5F9; }
+.dark .main-content [class*="text-slate-700"] { color: #CBD5E1; }
+.dark .main-content [class*="text-slate-600"] { color: #94A3B8; }
+.dark .main-content [class*="text-slate-500"] { color: #94A3B8; }
+
+.dark .main-content > div > .bg-white,
+.dark .main-content .bg-white:not(.leaflet-container *) {
+    background-color: #1E293B;
+}
+
+.dark .main-content .border-slate-200 { border-color: #334155; }
+.dark .main-content .border-slate-100 { border-color: #334155; }
+
+/* Dark mode for leaflet */
+.dark .leaflet-container {
+    background: #0F172A !important;
+}
+
+.dark .district-tooltip {
+    background: #1E293B !important;
+    border-color: #334155 !important;
+    color: #E2E8F0 !important;
+}
+
