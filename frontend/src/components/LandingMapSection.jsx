@@ -44,7 +44,7 @@ const LandingMapSection = ({ onExploreDashboard }) => {
   const [selected, setSelected] = useState(null);
 
   useEffect(() => {
-    const BACKEND = process.env.REACT_APP_BACKEND_URL;
+    const BACKEND = process.env.REACT_APP_BACKEND_URL || "http://127.0.0.1:8001";
     Promise.all([
       fetch("/data/odisha-districts.geojson").then((r) => r.json()),
       fetch("/data/odisha-state-outline.geojson").then((r) => r.json()),
